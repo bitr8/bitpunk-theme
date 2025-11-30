@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <defs>
+    <style type="text/css">
+      .ColorScheme-Text { color:#E0E8F0; }
+      .ColorScheme-Background { color:#0A0E14; }
+      .ColorScheme-ButtonFocus { color:#0ABDC6; }
+    </style>
+  </defs>
+
+  <!-- VERTICAL SCROLLBAR -->
+
+  <!-- Background track -->
+  <rect id="background-vertical-center" x="4" y="8" width="8" height="16" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-vertical-top" x="4" y="4" width="8" height="4" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-vertical-bottom" x="4" y="24" width="8" height="4" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-vertical-topleft" x="0" y="4" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-vertical-topright" x="12" y="4" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-vertical-bottomleft" x="0" y="24" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-vertical-bottomright" x="12" y="24" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-vertical-left" x="0" y="8" width="4" height="16" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-vertical-right" x="12" y="8" width="4" height="16" fill="#0A0E14" fill-opacity="0.4"/>
+
+  <!-- Slider handle - normal -->
+  <rect id="slider-vertical-center" x="20" y="8" width="8" height="16" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-vertical-top" x="20" y="4" width="8" height="4" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-vertical-bottom" x="20" y="24" width="8" height="4" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-vertical-topleft" x="16" y="4" width="4" height="4" rx="2" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-vertical-topright" x="28" y="4" width="4" height="4" rx="2" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-vertical-bottomleft" x="16" y="24" width="4" height="4" rx="2" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-vertical-bottomright" x="28" y="24" width="4" height="4" rx="2" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-vertical-left" x="16" y="8" width="4" height="16" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-vertical-right" x="28" y="8" width="4" height="16" fill="#2A3A4D" fill-opacity="0.9"/>
+
+  <!-- Slider handle - hover -->
+  <rect id="hover-slider-vertical-center" x="36" y="8" width="8" height="16" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-vertical-top" x="36" y="4" width="8" height="4" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-vertical-bottom" x="36" y="24" width="8" height="4" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-vertical-topleft" x="32" y="4" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-vertical-topright" x="44" y="4" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-vertical-bottomleft" x="32" y="24" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-vertical-bottomright" x="44" y="24" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-vertical-left" x="32" y="8" width="4" height="16" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-vertical-right" x="44" y="8" width="4" height="16" fill="#0ABDC6" fill-opacity="0.5"/>
+
+  <!-- Slider handle - pressed -->
+  <rect id="sunken-slider-vertical-center" x="52" y="8" width="8" height="16" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-vertical-top" x="52" y="4" width="8" height="4" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-vertical-bottom" x="52" y="24" width="8" height="4" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-vertical-topleft" x="48" y="4" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-vertical-topright" x="60" y="4" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-vertical-bottomleft" x="48" y="24" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-vertical-bottomright" x="60" y="24" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-vertical-left" x="48" y="8" width="4" height="16" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-vertical-right" x="60" y="8" width="4" height="16" fill="#0ABDC6" fill-opacity="0.7"/>
+
+  <!-- HORIZONTAL SCROLLBAR -->
+
+  <!-- Background track horizontal -->
+  <rect id="background-horizontal-center" x="8" y="36" width="16" height="8" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-horizontal-top" x="8" y="32" width="16" height="4" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-horizontal-bottom" x="8" y="44" width="16" height="4" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-horizontal-topleft" x="4" y="32" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-horizontal-topright" x="24" y="32" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-horizontal-bottomleft" x="4" y="44" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-horizontal-bottomright" x="24" y="44" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-horizontal-left" x="4" y="36" width="4" height="8" fill="#0A0E14" fill-opacity="0.4"/>
+  <rect id="background-horizontal-right" x="24" y="36" width="4" height="8" fill="#0A0E14" fill-opacity="0.4"/>
+
+  <!-- Slider handle horizontal - normal -->
+  <rect id="slider-horizontal-center" x="8" y="52" width="16" height="8" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-horizontal-top" x="8" y="48" width="16" height="4" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-horizontal-bottom" x="8" y="60" width="16" height="4" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-horizontal-topleft" x="4" y="48" width="4" height="4" rx="2" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-horizontal-topright" x="24" y="48" width="4" height="4" rx="2" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-horizontal-bottomleft" x="4" y="60" width="4" height="4" rx="2" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-horizontal-bottomright" x="24" y="60" width="4" height="4" rx="2" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-horizontal-left" x="4" y="52" width="4" height="8" fill="#2A3A4D" fill-opacity="0.9"/>
+  <rect id="slider-horizontal-right" x="24" y="52" width="4" height="8" fill="#2A3A4D" fill-opacity="0.9"/>
+
+  <!-- Slider handle horizontal - hover -->
+  <rect id="hover-slider-horizontal-center" x="8" y="68" width="16" height="8" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-horizontal-top" x="8" y="64" width="16" height="4" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-horizontal-bottom" x="8" y="76" width="16" height="4" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-horizontal-topleft" x="4" y="64" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-horizontal-topright" x="24" y="64" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-horizontal-bottomleft" x="4" y="76" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-horizontal-bottomright" x="24" y="76" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-horizontal-left" x="4" y="68" width="4" height="8" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="hover-slider-horizontal-right" x="24" y="68" width="4" height="8" fill="#0ABDC6" fill-opacity="0.5"/>
+
+  <!-- Slider handle horizontal - pressed -->
+  <rect id="sunken-slider-horizontal-center" x="8" y="84" width="16" height="8" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-horizontal-top" x="8" y="80" width="16" height="4" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-horizontal-bottom" x="8" y="92" width="16" height="4" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-horizontal-topleft" x="4" y="80" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-horizontal-topright" x="24" y="80" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-horizontal-bottomleft" x="4" y="92" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-horizontal-bottomright" x="24" y="92" width="4" height="4" rx="2" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-horizontal-left" x="4" y="84" width="4" height="8" fill="#0ABDC6" fill-opacity="0.7"/>
+  <rect id="sunken-slider-horizontal-right" x="24" y="84" width="4" height="8" fill="#0ABDC6" fill-opacity="0.7"/>
+
+  <!-- Arrow buttons -->
+  <path id="arrow-up" d="M70,12 L74,4 L78,12" stroke="#E0E8F0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path id="arrow-down" d="M70,20 L74,28 L78,20" stroke="#E0E8F0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path id="arrow-left" d="M38,40 L30,44 L38,48" stroke="#E0E8F0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path id="arrow-right" d="M46,40 L54,44 L46,48" stroke="#E0E8F0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>

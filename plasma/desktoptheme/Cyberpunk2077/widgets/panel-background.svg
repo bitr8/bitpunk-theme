@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 157 64" width="157" height="64">
+  <defs>
+    <style type="text/css">
+      .ColorScheme-Text { color:#E0E8F0; }
+      .ColorScheme-Background { color:#0A0E14; }
+    </style>
+    <!-- Strong cyan glow gradient for top edge -->
+    <linearGradient id="topGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ABDC6;stop-opacity:0.9"/>
+      <stop offset="15%" style="stop-color:#0ABDC6;stop-opacity:0.4"/>
+      <stop offset="40%" style="stop-color:#0ABDC6;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#0ABDC6;stop-opacity:0"/>
+    </linearGradient>
+    <!-- Bottom glow for top panels -->
+    <linearGradient id="bottomGlow" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ABDC6;stop-opacity:0.9"/>
+      <stop offset="15%" style="stop-color:#0ABDC6;stop-opacity:0.4"/>
+      <stop offset="40%" style="stop-color:#0ABDC6;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#0ABDC6;stop-opacity:0"/>
+    </linearGradient>
+    <!-- Right edge glow -->
+    <linearGradient id="rightGlow" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ABDC6;stop-opacity:0.7"/>
+      <stop offset="30%" style="stop-color:#0ABDC6;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#0ABDC6;stop-opacity:0"/>
+    </linearGradient>
+    <!-- Left edge glow -->
+    <linearGradient id="leftGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ABDC6;stop-opacity:0.7"/>
+      <stop offset="30%" style="stop-color:#0ABDC6;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#0ABDC6;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- BOTTOM PANEL (location=4) - More transparent with inner glow -->
+  <!-- Main background - south -->
+  <rect id="south-center" x="26" y="32" width="105" height="26" fill="#0A0E14" fill-opacity="0.5"/>
+
+  <!-- Corners -->
+  <rect id="south-topleft" x="20" y="26" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.5"/>
+  <rect id="south-topright" x="131" y="26" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.5"/>
+  <rect id="south-bottomleft" x="20" y="52" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.5"/>
+  <rect id="south-bottomright" x="131" y="52" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.5"/>
+
+  <!-- Edges -->
+  <rect id="south-top" x="26" y="26" width="105" height="6" fill="#0A0E14" fill-opacity="0.5"/>
+  <rect id="south-bottom" x="26" y="52" width="105" height="6" fill="#0A0E14" fill-opacity="0.5"/>
+  <rect id="south-left" x="20" y="32" width="6" height="20" fill="#0A0E14" fill-opacity="0.5"/>
+  <rect id="south-right" x="131" y="32" width="6" height="20" fill="#0A0E14" fill-opacity="0.5"/>
+
+  <!-- Bright top accent line -->
+  <rect id="south-accent" x="20" y="26" width="117" height="2" fill="#0ABDC6" fill-opacity="1.0"/>
+
+  <!-- Inner glow fading DOWN into panel -->
+  <rect id="south-glow-1" x="20" y="28" width="117" height="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="south-glow-2" x="20" y="30" width="117" height="2" fill="#0ABDC6" fill-opacity="0.3"/>
+  <rect id="south-glow-3" x="20" y="32" width="117" height="3" fill="#0ABDC6" fill-opacity="0.15"/>
+  <rect id="south-glow-4" x="20" y="35" width="117" height="4" fill="#0ABDC6" fill-opacity="0.08"/>
+  <rect id="south-glow-5" x="20" y="39" width="117" height="5" fill="#0ABDC6" fill-opacity="0.03"/>
+
+  <!-- Hint elements for margins -->
+  <rect id="south-hint-top-margin" x="0" y="20" width="1" height="6" fill="none"/>
+  <rect id="south-hint-bottom-margin" x="0" y="58" width="1" height="6" fill="none"/>
+  <rect id="south-hint-left-margin" x="14" y="0" width="6" height="1" fill="none"/>
+  <rect id="south-hint-right-margin" x="137" y="0" width="6" height="1" fill="none"/>
+
+  <!-- TOP PANEL (location=3) -->
+  <!-- Main background - north -->
+  <rect id="north-center" x="26" y="6" width="105" height="26" fill="#0A0E14" fill-opacity="0.55"/>
+
+  <!-- Corners -->
+  <rect id="north-topleft" x="20" y="0" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="north-topright" x="131" y="0" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="north-bottomleft" x="20" y="26" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="north-bottomright" x="131" y="26" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.55"/>
+
+  <!-- Edges -->
+  <rect id="north-top" x="26" y="0" width="105" height="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="north-bottom" x="26" y="26" width="105" height="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="north-left" x="20" y="6" width="6" height="20" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="north-right" x="131" y="6" width="6" height="20" fill="#0A0E14" fill-opacity="0.55"/>
+
+  <!-- Strong glowing bottom accent line for top panel -->
+  <rect id="north-accent-glow" x="20" y="28" width="117" height="4" fill="url(#bottomGlow)"/>
+  <rect id="north-accent" x="20" y="30" width="117" height="2" fill="#0ABDC6" fill-opacity="0.95"/>
+
+  <!-- Hint elements -->
+  <rect id="north-hint-top-margin" x="0" y="0" width="1" height="0" fill="none"/>
+  <rect id="north-hint-bottom-margin" x="0" y="32" width="1" height="6" fill="none"/>
+  <rect id="north-hint-left-margin" x="14" y="0" width="6" height="1" fill="none"/>
+  <rect id="north-hint-right-margin" x="137" y="0" width="6" height="1" fill="none"/>
+
+  <!-- LEFT PANEL (location=5) -->
+  <rect id="west-center" x="0" y="26" width="26" height="12" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="west-topleft" x="0" y="20" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="west-topright" x="20" y="20" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="west-bottomleft" x="0" y="38" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="west-bottomright" x="20" y="38" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="west-top" x="6" y="20" width="14" height="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="west-bottom" x="6" y="38" width="14" height="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="west-left" x="0" y="26" width="6" height="12" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="west-right" x="20" y="26" width="6" height="12" fill="#0A0E14" fill-opacity="0.55"/>
+  <!-- Right accent for left panel with glow -->
+  <rect id="west-accent-glow" x="23" y="20" width="4" height="24" fill="url(#rightGlow)"/>
+  <rect id="west-accent" x="25" y="20" width="2" height="24" fill="#0ABDC6" fill-opacity="0.95"/>
+
+  <!-- RIGHT PANEL (location=6) -->
+  <rect id="east-center" x="131" y="26" width="26" height="12" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="east-topleft" x="131" y="20" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="east-topright" x="151" y="20" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="east-bottomleft" x="131" y="38" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="east-bottomright" x="151" y="38" width="6" height="6" rx="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="east-top" x="137" y="20" width="14" height="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="east-bottom" x="137" y="38" width="14" height="6" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="east-left" x="131" y="26" width="6" height="12" fill="#0A0E14" fill-opacity="0.55"/>
+  <rect id="east-right" x="151" y="26" width="6" height="12" fill="#0A0E14" fill-opacity="0.55"/>
+  <!-- Left accent for right panel with glow -->
+  <rect id="east-accent-glow" x="129" y="20" width="4" height="24" fill="url(#leftGlow)"/>
+  <rect id="east-accent" x="130" y="20" width="2" height="24" fill="#0ABDC6" fill-opacity="0.95"/>
+
+  <!-- Shadow/glow elements -->
+  <rect id="shadow-top" x="26" y="20" width="105" height="8" fill="url(#topGlow)"/>
+  <rect id="shadow-bottom" x="26" y="56" width="105" height="8" fill="url(#bottomGlow)"/>
+</svg>

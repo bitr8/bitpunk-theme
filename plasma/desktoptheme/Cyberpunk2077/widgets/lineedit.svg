@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 64" width="96" height="64">
+  <defs>
+    <style type="text/css">
+      .ColorScheme-Text { color:#E0E8F0; }
+      .ColorScheme-Background { color:#0A0E14; }
+      .ColorScheme-ButtonFocus { color:#0ABDC6; }
+    </style>
+  </defs>
+
+  <!-- BASE state - dark input field -->
+  <rect id="base-center" x="6" y="6" width="20" height="20" fill="#050505" fill-opacity="0.95"/>
+  <rect id="base-top" x="6" y="2" width="20" height="4" fill="#050505" fill-opacity="0.95"/>
+  <rect id="base-bottom" x="6" y="26" width="20" height="4" fill="#050505" fill-opacity="0.95"/>
+  <rect id="base-left" x="2" y="6" width="4" height="20" fill="#050505" fill-opacity="0.95"/>
+  <rect id="base-right" x="26" y="6" width="4" height="20" fill="#050505" fill-opacity="0.95"/>
+  <rect id="base-topleft" x="2" y="2" width="4" height="4" rx="2" fill="#050505" fill-opacity="0.95"/>
+  <rect id="base-topright" x="26" y="2" width="4" height="4" rx="2" fill="#050505" fill-opacity="0.95"/>
+  <rect id="base-bottomleft" x="2" y="26" width="4" height="4" rx="2" fill="#050505" fill-opacity="0.95"/>
+  <rect id="base-bottomright" x="26" y="26" width="4" height="4" rx="2" fill="#050505" fill-opacity="0.95"/>
+  <!-- Subtle border -->
+  <rect id="base-border" x="2" y="2" width="28" height="28" fill="none" stroke="#08919A" stroke-width="1" stroke-opacity="0.4" rx="2"/>
+  <rect id="base-hint-top-margin" x="0" y="0" width="1" height="2" fill="none"/>
+  <rect id="base-hint-bottom-margin" x="0" y="30" width="1" height="2" fill="none"/>
+  <rect id="base-hint-left-margin" x="0" y="0" width="2" height="1" fill="none"/>
+  <rect id="base-hint-right-margin" x="30" y="0" width="2" height="1" fill="none"/>
+
+  <!-- HOVER state -->
+  <rect id="hover-center" x="38" y="6" width="20" height="20" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="hover-top" x="38" y="2" width="20" height="4" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="hover-bottom" x="38" y="26" width="20" height="4" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="hover-left" x="34" y="6" width="4" height="20" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="hover-right" x="58" y="6" width="4" height="20" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="hover-topleft" x="34" y="2" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="hover-topright" x="58" y="2" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="hover-bottomleft" x="34" y="26" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="hover-bottomright" x="58" y="26" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.95"/>
+  <!-- Cyan border on hover -->
+  <rect id="hover-border" x="34" y="2" width="28" height="28" fill="none" stroke="#0ABDC6" stroke-width="1" stroke-opacity="0.5" rx="2"/>
+  <rect id="hover-hint-top-margin" x="32" y="0" width="1" height="2" fill="none"/>
+  <rect id="hover-hint-bottom-margin" x="32" y="30" width="1" height="2" fill="none"/>
+  <rect id="hover-hint-left-margin" x="32" y="0" width="2" height="1" fill="none"/>
+  <rect id="hover-hint-right-margin" x="62" y="0" width="2" height="1" fill="none"/>
+
+  <!-- FOCUS state - bright cyan border -->
+  <rect id="focus-center" x="70" y="6" width="20" height="20" fill="#0A0E14" fill-opacity="0.98"/>
+  <rect id="focus-top" x="70" y="2" width="20" height="4" fill="#0A0E14" fill-opacity="0.98"/>
+  <rect id="focus-bottom" x="70" y="26" width="20" height="4" fill="#0A0E14" fill-opacity="0.98"/>
+  <rect id="focus-left" x="66" y="6" width="4" height="20" fill="#0A0E14" fill-opacity="0.98"/>
+  <rect id="focus-right" x="90" y="6" width="4" height="20" fill="#0A0E14" fill-opacity="0.98"/>
+  <rect id="focus-topleft" x="66" y="2" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.98"/>
+  <rect id="focus-topright" x="90" y="2" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.98"/>
+  <rect id="focus-bottomleft" x="66" y="26" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.98"/>
+  <rect id="focus-bottomright" x="90" y="26" width="4" height="4" rx="2" fill="#0A0E14" fill-opacity="0.98"/>
+  <!-- Strong cyan focus border -->
+  <rect id="focus-border" x="66" y="2" width="28" height="28" fill="none" stroke="#0ABDC6" stroke-width="2" stroke-opacity="0.85" rx="2"/>
+  <!-- Subtle inner glow -->
+  <rect id="focus-glow" x="67" y="3" width="26" height="26" fill="none" stroke="#0ABDC6" stroke-width="1" stroke-opacity="0.2" rx="1"/>
+  <rect id="focus-hint-top-margin" x="64" y="0" width="1" height="2" fill="none"/>
+  <rect id="focus-hint-bottom-margin" x="64" y="30" width="1" height="2" fill="none"/>
+  <rect id="focus-hint-left-margin" x="64" y="0" width="2" height="1" fill="none"/>
+  <rect id="focus-hint-right-margin" x="94" y="0" width="2" height="1" fill="none"/>
+
+  <!-- Second row: SHADOW and additional states -->
+
+  <!-- SHADOW -->
+  <rect id="shadow-center" x="6" y="38" width="20" height="20" fill="#000000" fill-opacity="0.15"/>
+  <rect id="shadow-top" x="6" y="34" width="20" height="4" fill="#000000" fill-opacity="0.08"/>
+  <rect id="shadow-bottom" x="6" y="58" width="20" height="4" fill="#000000" fill-opacity="0.2"/>
+  <rect id="shadow-left" x="2" y="38" width="4" height="20" fill="#000000" fill-opacity="0.1"/>
+  <rect id="shadow-right" x="26" y="38" width="4" height="20" fill="#000000" fill-opacity="0.18"/>
+  <rect id="shadow-topleft" x="2" y="34" width="4" height="4" fill="#000000" fill-opacity="0.05"/>
+  <rect id="shadow-topright" x="26" y="34" width="4" height="4" fill="#000000" fill-opacity="0.1"/>
+  <rect id="shadow-bottomleft" x="2" y="58" width="4" height="4" fill="#000000" fill-opacity="0.12"/>
+  <rect id="shadow-bottomright" x="26" y="58" width="4" height="4" fill="#000000" fill-opacity="0.25"/>
+  <rect id="shadow-hint-top-margin" x="0" y="32" width="1" height="2" fill="none"/>
+  <rect id="shadow-hint-bottom-margin" x="0" y="62" width="1" height="4" fill="none"/>
+  <rect id="shadow-hint-left-margin" x="0" y="32" width="2" height="1" fill="none"/>
+  <rect id="shadow-hint-right-margin" x="30" y="32" width="4" height="1" fill="none"/>
+</svg>

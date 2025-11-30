@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <style type="text/css">
+      .ColorScheme-Text { color:#E0E8F0; }
+      .ColorScheme-Background { color:#131A24; }
+    </style>
+  </defs>
+
+  <!-- Main tooltip background -->
+  <rect id="center" x="8" y="8" width="32" height="32" fill="#131A24" fill-opacity="0.95"/>
+
+  <!-- Corners with rounded edges -->
+  <rect id="topleft" x="4" y="4" width="4" height="4" rx="4" fill="#131A24" fill-opacity="0.95"/>
+  <rect id="topright" x="40" y="4" width="4" height="4" rx="4" fill="#131A24" fill-opacity="0.95"/>
+  <rect id="bottomleft" x="4" y="40" width="4" height="4" rx="4" fill="#131A24" fill-opacity="0.95"/>
+  <rect id="bottomright" x="40" y="40" width="4" height="4" rx="4" fill="#131A24" fill-opacity="0.95"/>
+
+  <!-- Edges -->
+  <rect id="top" x="8" y="4" width="32" height="4" fill="#131A24" fill-opacity="0.95"/>
+  <rect id="bottom" x="8" y="40" width="32" height="4" fill="#131A24" fill-opacity="0.95"/>
+  <rect id="left" x="4" y="8" width="4" height="32" fill="#131A24" fill-opacity="0.95"/>
+  <rect id="right" x="40" y="8" width="4" height="32" fill="#131A24" fill-opacity="0.95"/>
+
+  <!-- Border accent -->
+  <rect id="border-top" x="4" y="4" width="40" height="1" fill="#08919A" fill-opacity="0.8"/>
+  <rect id="border-bottom" x="4" y="43" width="40" height="1" fill="#08919A" fill-opacity="0.5"/>
+  <rect id="border-left" x="4" y="4" width="1" height="40" fill="#08919A" fill-opacity="0.6"/>
+  <rect id="border-right" x="43" y="4" width="1" height="40" fill="#08919A" fill-opacity="0.6"/>
+</svg>

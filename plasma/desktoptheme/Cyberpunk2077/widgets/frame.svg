@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <style type="text/css">
+      .ColorScheme-Text { color:#E0E8F0; }
+      .ColorScheme-Background { color:#0A0E14; }
+      .ColorScheme-ButtonFocus { color:#0ABDC6; }
+    </style>
+  </defs>
+
+  <!-- PLAIN frame - subtle border container -->
+  <rect id="plain-center" x="6" y="6" width="20" height="20" fill="none"/>
+  <rect id="plain-top" x="6" y="2" width="20" height="4" fill="none"/>
+  <rect id="plain-bottom" x="6" y="26" width="20" height="4" fill="none"/>
+  <rect id="plain-left" x="2" y="6" width="4" height="20" fill="none"/>
+  <rect id="plain-right" x="26" y="6" width="4" height="20" fill="none"/>
+  <rect id="plain-topleft" x="2" y="2" width="4" height="4" fill="none"/>
+  <rect id="plain-topright" x="26" y="2" width="4" height="4" fill="none"/>
+  <rect id="plain-bottomleft" x="2" y="26" width="4" height="4" fill="none"/>
+  <rect id="plain-bottomright" x="26" y="26" width="4" height="4" fill="none"/>
+  <!-- Border -->
+  <rect id="plain-border" x="2" y="2" width="28" height="28" fill="none" stroke="#08919A" stroke-width="1" stroke-opacity="0.3" rx="3"/>
+  <rect id="plain-hint-top-margin" x="0" y="0" width="1" height="2" fill="none"/>
+  <rect id="plain-hint-bottom-margin" x="0" y="30" width="1" height="2" fill="none"/>
+  <rect id="plain-hint-left-margin" x="0" y="0" width="2" height="1" fill="none"/>
+  <rect id="plain-hint-right-margin" x="30" y="0" width="2" height="1" fill="none"/>
+
+  <!-- RAISED frame - elevated surface -->
+  <rect id="raised-center" x="38" y="6" width="20" height="20" fill="#131A24" fill-opacity="0.5"/>
+  <rect id="raised-top" x="38" y="2" width="20" height="4" fill="#131A24" fill-opacity="0.5"/>
+  <rect id="raised-bottom" x="38" y="26" width="20" height="4" fill="#131A24" fill-opacity="0.5"/>
+  <rect id="raised-left" x="34" y="6" width="4" height="20" fill="#131A24" fill-opacity="0.5"/>
+  <rect id="raised-right" x="58" y="6" width="4" height="20" fill="#131A24" fill-opacity="0.5"/>
+  <rect id="raised-topleft" x="34" y="2" width="4" height="4" rx="3" fill="#131A24" fill-opacity="0.5"/>
+  <rect id="raised-topright" x="58" y="2" width="4" height="4" rx="3" fill="#131A24" fill-opacity="0.5"/>
+  <rect id="raised-bottomleft" x="34" y="26" width="4" height="4" rx="3" fill="#131A24" fill-opacity="0.5"/>
+  <rect id="raised-bottomright" x="58" y="26" width="4" height="4" rx="3" fill="#131A24" fill-opacity="0.5"/>
+  <!-- Border with highlight on top -->
+  <rect id="raised-border-top" x="34" y="2" width="28" height="1" fill="#08919A" fill-opacity="0.4"/>
+  <rect id="raised-border-left" x="34" y="2" width="1" height="28" fill="#08919A" fill-opacity="0.3"/>
+  <rect id="raised-border-right" x="61" y="2" width="1" height="28" fill="#08919A" fill-opacity="0.2"/>
+  <rect id="raised-border-bottom" x="34" y="29" width="28" height="1" fill="#08919A" fill-opacity="0.15"/>
+  <rect id="raised-hint-top-margin" x="32" y="0" width="1" height="2" fill="none"/>
+  <rect id="raised-hint-bottom-margin" x="32" y="30" width="1" height="2" fill="none"/>
+  <rect id="raised-hint-left-margin" x="32" y="0" width="2" height="1" fill="none"/>
+  <rect id="raised-hint-right-margin" x="62" y="0" width="2" height="1" fill="none"/>
+
+  <!-- SUNKEN frame - inset surface -->
+  <rect id="sunken-center" x="6" y="38" width="20" height="20" fill="#050505" fill-opacity="0.6"/>
+  <rect id="sunken-top" x="6" y="34" width="20" height="4" fill="#050505" fill-opacity="0.6"/>
+  <rect id="sunken-bottom" x="6" y="58" width="20" height="4" fill="#050505" fill-opacity="0.6"/>
+  <rect id="sunken-left" x="2" y="38" width="4" height="20" fill="#050505" fill-opacity="0.6"/>
+  <rect id="sunken-right" x="26" y="38" width="4" height="20" fill="#050505" fill-opacity="0.6"/>
+  <rect id="sunken-topleft" x="2" y="34" width="4" height="4" rx="3" fill="#050505" fill-opacity="0.6"/>
+  <rect id="sunken-topright" x="26" y="34" width="4" height="4" rx="3" fill="#050505" fill-opacity="0.6"/>
+  <rect id="sunken-bottomleft" x="2" y="58" width="4" height="4" rx="3" fill="#050505" fill-opacity="0.6"/>
+  <rect id="sunken-bottomright" x="26" y="58" width="4" height="4" rx="3" fill="#050505" fill-opacity="0.6"/>
+  <!-- Inner shadow border -->
+  <rect id="sunken-border-top" x="2" y="34" width="28" height="1" fill="#000000" fill-opacity="0.3"/>
+  <rect id="sunken-border-left" x="2" y="34" width="1" height="28" fill="#000000" fill-opacity="0.25"/>
+  <rect id="sunken-border-right" x="29" y="34" width="1" height="28" fill="#08919A" fill-opacity="0.15"/>
+  <rect id="sunken-border-bottom" x="2" y="61" width="28" height="1" fill="#08919A" fill-opacity="0.2"/>
+  <rect id="sunken-hint-top-margin" x="0" y="32" width="1" height="2" fill="none"/>
+  <rect id="sunken-hint-bottom-margin" x="0" y="62" width="1" height="2" fill="none"/>
+  <rect id="sunken-hint-left-margin" x="0" y="32" width="2" height="1" fill="none"/>
+  <rect id="sunken-hint-right-margin" x="30" y="32" width="2" height="1" fill="none"/>
+
+  <!-- HOVER frame - cyan tint -->
+  <rect id="hover-center" x="38" y="38" width="20" height="20" fill="#0ABDC6" fill-opacity="0.08"/>
+  <rect id="hover-top" x="38" y="34" width="20" height="4" fill="#0ABDC6" fill-opacity="0.08"/>
+  <rect id="hover-bottom" x="38" y="58" width="20" height="4" fill="#0ABDC6" fill-opacity="0.08"/>
+  <rect id="hover-left" x="34" y="38" width="4" height="20" fill="#0ABDC6" fill-opacity="0.08"/>
+  <rect id="hover-right" x="58" y="38" width="4" height="20" fill="#0ABDC6" fill-opacity="0.08"/>
+  <rect id="hover-topleft" x="34" y="34" width="4" height="4" rx="3" fill="#0ABDC6" fill-opacity="0.08"/>
+  <rect id="hover-topright" x="58" y="34" width="4" height="4" rx="3" fill="#0ABDC6" fill-opacity="0.08"/>
+  <rect id="hover-bottomleft" x="34" y="58" width="4" height="4" rx="3" fill="#0ABDC6" fill-opacity="0.08"/>
+  <rect id="hover-bottomright" x="58" y="58" width="4" height="4" rx="3" fill="#0ABDC6" fill-opacity="0.08"/>
+  <!-- Cyan border -->
+  <rect id="hover-border" x="34" y="34" width="28" height="28" fill="none" stroke="#0ABDC6" stroke-width="1" stroke-opacity="0.4" rx="3"/>
+  <rect id="hover-hint-top-margin" x="32" y="32" width="1" height="2" fill="none"/>
+  <rect id="hover-hint-bottom-margin" x="32" y="62" width="1" height="2" fill="none"/>
+  <rect id="hover-hint-left-margin" x="32" y="32" width="2" height="1" fill="none"/>
+  <rect id="hover-hint-right-margin" x="62" y="32" width="2" height="1" fill="none"/>
+</svg>

@@ -1,0 +1,19 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "",
+                "Name": "Desktop Contributors"
+            }
+        ],
+        "Category": "",
+        "Description": "Cyberpunk 2077 Night City theme - OLED optimised with cyan accents",
+        "EnabledByDefault": true,
+        "Id": "Cyberpunk2077",
+        "License": "LGPL",
+        "Name": "Cyberpunk 2077",
+        "Version": "1.0",
+        "Website": ""
+    },
+    "X-Plasma-API": "5.0"
+}

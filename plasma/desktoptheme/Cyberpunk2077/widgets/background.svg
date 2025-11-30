@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <style type="text/css">
+      .ColorScheme-Text { color:#E0E8F0; }
+      .ColorScheme-Background { color:#0A0E14; }
+    </style>
+  </defs>
+
+  <!-- Main popup/widget background -->
+  <rect id="center" x="8" y="8" width="32" height="32" fill="#0A0E14" fill-opacity="0.92"/>
+
+  <!-- Corners -->
+  <rect id="topleft" x="4" y="4" width="4" height="4" rx="4" fill="#0A0E14" fill-opacity="0.92"/>
+  <rect id="topright" x="40" y="4" width="4" height="4" rx="4" fill="#0A0E14" fill-opacity="0.92"/>
+  <rect id="bottomleft" x="4" y="40" width="4" height="4" rx="4" fill="#0A0E14" fill-opacity="0.92"/>
+  <rect id="bottomright" x="40" y="40" width="4" height="4" rx="4" fill="#0A0E14" fill-opacity="0.92"/>
+
+  <!-- Edges -->
+  <rect id="top" x="8" y="4" width="32" height="4" fill="#0A0E14" fill-opacity="0.92"/>
+  <rect id="bottom" x="8" y="40" width="32" height="4" fill="#0A0E14" fill-opacity="0.92"/>
+  <rect id="left" x="4" y="8" width="4" height="32" fill="#0A0E14" fill-opacity="0.92"/>
+  <rect id="right" x="40" y="8" width="4" height="32" fill="#0A0E14" fill-opacity="0.92"/>
+
+  <!-- Subtle border -->
+  <rect id="border-top" x="4" y="4" width="40" height="1" fill="#08919A" fill-opacity="0.5"/>
+  <rect id="border-bottom" x="4" y="43" width="40" height="1" fill="#08919A" fill-opacity="0.3"/>
+  <rect id="border-left" x="4" y="4" width="1" height="40" fill="#08919A" fill-opacity="0.4"/>
+  <rect id="border-right" x="43" y="4" width="1" height="40" fill="#08919A" fill-opacity="0.4"/>
+
+  <!-- Margin hints -->
+  <rect id="hint-top-margin" x="0" y="0" width="1" height="4" fill="none"/>
+  <rect id="hint-bottom-margin" x="0" y="44" width="1" height="4" fill="none"/>
+  <rect id="hint-left-margin" x="0" y="0" width="4" height="1" fill="none"/>
+  <rect id="hint-right-margin" x="44" y="0" width="4" height="1" fill="none"/>
+</svg>

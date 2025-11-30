@@ -1,0 +1,11 @@
+[DesktopProperties]
+UseGlobalSettings=false
+
+[ContrastEffect]
+enabled=true
+contrast=0.2
+intensity=0.4
+saturation=1.7
+
+[AdaptiveTransparency]
+enabled=true

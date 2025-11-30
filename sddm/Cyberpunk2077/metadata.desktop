@@ -1,0 +1,10 @@
+[SddmGreeterTheme]
+Name=Cyberpunk 2077
+Description=Cyberpunk 2077 Night City login theme - OLED optimised with cyan accents
+Author=Desktop Contributors
+Version=1.0
+Website=
+Screenshot=
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations

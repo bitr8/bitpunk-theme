@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Conky Cyberpunk 2077
+Comment=Cyberpunk 2077 themed system monitor widget
+Exec=conky -c /home/rob/.config/conky/cyberpunk2077.conf
+Terminal=false
+StartupNotify=false
+X-KDE-autostart-after=panel

@@ -1,0 +1,378 @@
+/* Cyberpunk 2077 GTK3 Theme */
+/* OLED optimised with cyan accents */
+
+@define-color theme_bg_color #0A0E14;
+@define-color theme_fg_color #E0E8F0;
+@define-color theme_base_color #050505;
+@define-color theme_text_color #E0E8F0;
+@define-color theme_selected_bg_color #0ABDC6;
+@define-color theme_selected_fg_color #050505;
+@define-color theme_tooltip_bg_color #131A24;
+@define-color theme_tooltip_fg_color #E0E8F0;
+@define-color borders #08919A;
+@define-color insensitive_bg_color #0A0E14;
+@define-color insensitive_fg_color #4A5A6A;
+@define-color insensitive_borders #1C2632;
+@define-color warning_color #F3E600;
+@define-color error_color #FF4A57;
+@define-color success_color #0ABDC6;
+@define-color link_color #0ABDC6;
+@define-color link_visited_color #08919A;
+@define-color accent_color #0ABDC6;
+@define-color accent_hover #EA00D9;
+
+/* Window */
+window {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+/* Header bar */
+headerbar {
+    background-color: #050505;
+    color: @theme_fg_color;
+    border-bottom: 1px solid @borders;
+    padding: 6px;
+}
+
+headerbar:backdrop {
+    background-color: #0A0E14;
+    color: #8A9BAD;
+}
+
+/* Buttons */
+button {
+    background-color: #1C2632;
+    color: @theme_fg_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+    padding: 6px 12px;
+    transition: all 150ms ease;
+}
+
+button:hover {
+    background-color: #2A3A4D;
+    border-color: @accent_hover;
+}
+
+button:active,
+button:checked {
+    background-color: @accent_color;
+    color: @theme_selected_fg_color;
+}
+
+button:disabled {
+    background-color: @insensitive_bg_color;
+    color: @insensitive_fg_color;
+    border-color: @insensitive_borders;
+}
+
+/* Suggested action button */
+button.suggested-action {
+    background-color: @accent_color;
+    color: @theme_selected_fg_color;
+    border-color: @accent_color;
+}
+
+button.suggested-action:hover {
+    background-color: #2ED8E0;
+}
+
+/* Destructive action button */
+button.destructive-action {
+    background-color: @error_color;
+    color: @theme_fg_color;
+    border-color: @error_color;
+}
+
+/* Entry fields */
+entry {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+entry:focus {
+    border-color: @accent_color;
+    box-shadow: 0 0 0 1px @accent_color;
+}
+
+entry:disabled {
+    background-color: @insensitive_bg_color;
+    color: @insensitive_fg_color;
+}
+
+/* Text selection */
+selection {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+/* Links */
+link,
+*:link {
+    color: @link_color;
+}
+
+*:link:visited {
+    color: @link_visited_color;
+}
+
+*:link:hover {
+    color: @accent_hover;
+}
+
+/* Menus */
+menu,
+.menu,
+.context-menu {
+    background-color: #131A24;
+    color: @theme_fg_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+    padding: 4px 0;
+}
+
+menuitem {
+    padding: 6px 12px;
+}
+
+menuitem:hover {
+    background-color: @accent_color;
+    color: @theme_selected_fg_color;
+}
+
+/* Scrollbars */
+scrollbar {
+    background-color: @theme_base_color;
+}
+
+scrollbar slider {
+    background-color: #2A3A4D;
+    border-radius: 4px;
+    min-width: 8px;
+    min-height: 8px;
+}
+
+scrollbar slider:hover {
+    background-color: @borders;
+}
+
+scrollbar slider:active {
+    background-color: @accent_color;
+}
+
+/* Progress bars */
+progressbar trough {
+    background-color: @theme_base_color;
+    border-radius: 4px;
+}
+
+progressbar progress {
+    background-color: @accent_color;
+    border-radius: 4px;
+}
+
+/* Tabs */
+notebook > header {
+    background-color: @theme_base_color;
+    border-bottom: 1px solid @borders;
+}
+
+notebook > header > tabs > tab {
+    background-color: transparent;
+    color: #8A9BAD;
+    padding: 8px 16px;
+    border-bottom: 2px solid transparent;
+}
+
+notebook > header > tabs > tab:checked {
+    color: @theme_fg_color;
+    border-bottom-color: @accent_color;
+}
+
+notebook > header > tabs > tab:hover:not(:checked) {
+    color: @theme_fg_color;
+    border-bottom-color: @borders;
+}
+
+/* Lists and tree views */
+list,
+listview,
+treeview {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+}
+
+list row,
+listview row {
+    padding: 8px;
+}
+
+list row:selected,
+listview row:selected,
+treeview:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+list row:hover:not(:selected),
+listview row:hover:not(:selected) {
+    background-color: #1C2632;
+}
+
+/* Tooltips */
+tooltip {
+    background-color: @theme_tooltip_bg_color;
+    color: @theme_tooltip_fg_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+    padding: 6px 8px;
+}
+
+/* Switches */
+switch {
+    background-color: #2A3A4D;
+    border-radius: 12px;
+    min-width: 48px;
+    min-height: 24px;
+}
+
+switch:checked {
+    background-color: @accent_color;
+}
+
+switch slider {
+    background-color: @theme_fg_color;
+    border-radius: 50%;
+    min-width: 20px;
+    min-height: 20px;
+    margin: 2px;
+}
+
+/* Sliders */
+scale trough {
+    background-color: @theme_base_color;
+    border-radius: 4px;
+}
+
+scale highlight {
+    background-color: @accent_color;
+    border-radius: 4px;
+}
+
+scale slider {
+    background-color: @theme_fg_color;
+    border-radius: 50%;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+scale slider:hover {
+    background-color: @accent_color;
+}
+
+/* Check and radio buttons */
+check,
+radio {
+    background-color: @theme_base_color;
+    border: 2px solid @borders;
+    min-width: 18px;
+    min-height: 18px;
+}
+
+check {
+    border-radius: 4px;
+}
+
+radio {
+    border-radius: 50%;
+}
+
+check:checked,
+radio:checked {
+    background-color: @accent_color;
+    border-color: @accent_color;
+}
+
+check:hover,
+radio:hover {
+    border-color: @accent_hover;
+}
+
+/* Spinbuttons */
+spinbutton {
+    background-color: @theme_base_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+}
+
+spinbutton button {
+    background-color: transparent;
+    border: none;
+}
+
+/* Popovers */
+popover {
+    background-color: #131A24;
+    border: 1px solid @borders;
+    border-radius: 8px;
+}
+
+/* Info bars */
+infobar {
+    border-radius: 4px;
+    padding: 8px;
+}
+
+infobar.info {
+    background-color: rgba(10, 189, 198, 0.2);
+    color: @accent_color;
+}
+
+infobar.warning {
+    background-color: rgba(243, 230, 0, 0.2);
+    color: @warning_color;
+}
+
+infobar.error {
+    background-color: rgba(255, 74, 87, 0.2);
+    color: @error_color;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: @theme_base_color;
+    border-right: 1px solid @borders;
+}
+
+.sidebar row {
+    padding: 8px 12px;
+}
+
+.sidebar row:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+/* Titlebar */
+.titlebar {
+    background-color: #050505;
+    color: @theme_fg_color;
+}
+
+.titlebar:backdrop {
+    background-color: #0A0E14;
+    color: #8A9BAD;
+}
+
+/* Nautilus/Files specific */
+.nautilus-window .sidebar {
+    background-color: @theme_base_color;
+}
+
+.nautilus-window placessidebar row:selected {
+    background-color: @theme_selected_bg_color;
+}
