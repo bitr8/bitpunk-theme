@@ -1,3 +1,9 @@
+[Wallpaper]
+defaultWallpaperTheme=Cyberpunk2077
+defaultFileSuffix=.jpg
+defaultWidth=2496
+defaultHeight=1560
+
 [DesktopProperties]
 UseGlobalSettings=false
 
