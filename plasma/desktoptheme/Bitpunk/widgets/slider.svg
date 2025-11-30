@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <style type="text/css">
+      .ColorScheme-Text { color:#E0E8F0; }
+      .ColorScheme-Background { color:#0A0E14; }
+      .ColorScheme-ButtonBackground { color:#1C2632; }
+      .ColorScheme-ButtonText { color:#E0E8F0; }
+      .ColorScheme-Highlight { color:#0ABDC6; }
+    </style>
+  </defs>
+
+  <!-- GROOVE (unfilled track) - 9-slice pattern -->
+
+  <!-- groove-center -->
+  <rect id="groove-center" x="11" y="11" width="3" height="3" fill="#1C2632" fill-opacity="0.8"/>
+
+  <!-- groove edges -->
+  <rect id="groove-top" x="11" y="7" width="3" height="3" fill="#1C2632" fill-opacity="0.7"/>
+  <rect id="groove-bottom" x="11" y="15" width="3" height="3" fill="#1C2632" fill-opacity="0.7"/>
+  <rect id="groove-left" x="7" y="11" width="3" height="3" fill="#1C2632" fill-opacity="0.7"/>
+  <rect id="groove-right" x="15" y="11" width="3" height="3" fill="#1C2632" fill-opacity="0.7"/>
+
+  <!-- groove corners (rounded) -->
+  <path id="groove-topleft" d="M7,10 Q7,7 10,7 L10,10 Z" fill="#1C2632" fill-opacity="0.6"/>
+  <path id="groove-topright" d="M15,7 Q18,7 18,10 L15,10 Z" fill="#1C2632" fill-opacity="0.6"/>
+  <path id="groove-bottomleft" d="M7,15 Q7,18 10,18 L10,15 Z" fill="#1C2632" fill-opacity="0.6"/>
+  <path id="groove-bottomright" d="M18,15 Q18,18 15,18 L15,15 Z" fill="#1C2632" fill-opacity="0.6"/>
+
+  <!-- GROOVE HIGHLIGHT (filled track - cyan) - 9-slice pattern -->
+
+  <!-- groove-highlight-center -->
+  <rect id="groove-highlight-center" x="36" y="11" width="3" height="3" fill="#0ABDC6" fill-opacity="0.7"/>
+
+  <!-- groove-highlight edges -->
+  <rect id="groove-highlight-top" x="36" y="7" width="3" height="3" fill="#0ABDC6" fill-opacity="0.6"/>
+  <rect id="groove-highlight-bottom" x="36" y="15" width="3" height="3" fill="#0ABDC6" fill-opacity="0.6"/>
+  <rect id="groove-highlight-left" x="32" y="11" width="3" height="3" fill="#0ABDC6" fill-opacity="0.6"/>
+  <rect id="groove-highlight-right" x="40" y="11" width="3" height="3" fill="#0ABDC6" fill-opacity="0.6"/>
+
+  <!-- groove-highlight corners -->
+  <path id="groove-highlight-topleft" d="M32,10 Q32,7 35,7 L35,10 Z" fill="#0ABDC6" fill-opacity="0.5"/>
+  <path id="groove-highlight-topright" d="M40,7 Q43,7 43,10 L40,10 Z" fill="#0ABDC6" fill-opacity="0.5"/>
+  <path id="groove-highlight-bottomleft" d="M32,15 Q32,18 35,18 L35,15 Z" fill="#0ABDC6" fill-opacity="0.5"/>
+  <path id="groove-highlight-bottomright" d="M43,15 Q43,18 40,18 L40,15 Z" fill="#0ABDC6" fill-opacity="0.5"/>
+
+  <!-- HORIZONTAL SLIDER HANDLE (normal state) -->
+  <g id="horizontal-slider-handle" transform="translate(0,74)">
+    <circle cx="16" cy="16" r="10" fill="#1C2632"/>
+    <circle cx="16" cy="16" r="9" fill="none" stroke="#08919A" stroke-width="1" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- HORIZONTAL SLIDER HOVER -->
+  <g id="horizontal-slider-hover" transform="translate(32,74)">
+    <circle cx="16" cy="16" r="10" fill="none" stroke="#0ABDC6" stroke-width="1"/>
+  </g>
+
+  <!-- HORIZONTAL SLIDER FOCUS -->
+  <g id="horizontal-slider-focus" transform="translate(64,74)">
+    <circle cx="16" cy="16" r="12" fill="#0ABDC6" fill-opacity="0.2"/>
+    <circle cx="16" cy="16" r="10" fill="none" stroke="#0ABDC6" stroke-width="2"/>
+  </g>
+
+  <!-- HORIZONTAL SLIDER SHADOW (subtle) -->
+  <g id="horizontal-slider-shadow" transform="translate(96,74)">
+    <circle cx="16" cy="18" r="10" fill="#000000" fill-opacity="0.2"/>
+  </g>
+
+  <!-- VERTICAL SLIDER HANDLE (normal state) -->
+  <g id="vertical-slider-handle" transform="translate(0,42)">
+    <circle cx="16" cy="16" r="10" fill="#1C2632"/>
+    <circle cx="16" cy="16" r="9" fill="none" stroke="#08919A" stroke-width="1" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- VERTICAL SLIDER HOVER -->
+  <g id="vertical-slider-hover" transform="translate(32,42)">
+    <circle cx="16" cy="16" r="10" fill="none" stroke="#0ABDC6" stroke-width="1"/>
+  </g>
+
+  <!-- VERTICAL SLIDER FOCUS -->
+  <g id="vertical-slider-focus" transform="translate(64,42)">
+    <circle cx="16" cy="16" r="12" fill="#0ABDC6" fill-opacity="0.2"/>
+    <circle cx="16" cy="16" r="10" fill="none" stroke="#0ABDC6" stroke-width="2"/>
+  </g>
+
+  <!-- VERTICAL SLIDER SHADOW -->
+  <g id="vertical-slider-shadow" transform="translate(96,42)">
+    <circle cx="16" cy="18" r="10" fill="#000000" fill-opacity="0.2"/>
+  </g>
+
+  <!-- Hint for handle size -->
+  <circle id="hint-handle-size" cx="52" cy="16" r="10" fill="#000000" fill-opacity="0"/>
+
+</svg>

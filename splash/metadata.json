@@ -1,0 +1,17 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "bitpunk-theme contributors"
+            }
+        ],
+        "Category": "",
+        "Description": "Bitpunk splash screen with cyan/magenta neon accents",
+        "Id": "com.github.bitpunk.splash",
+        "License": "GPL-3.0",
+        "Name": "Bitpunk",
+        "Website": "https://github.com/bitr8/bitpunk-theme"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

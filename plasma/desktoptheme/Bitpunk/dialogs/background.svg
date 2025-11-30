@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <style type="text/css">
+      .ColorScheme-Text { color:#E0E8F0; }
+      .ColorScheme-Background { color:#0A0E14; }
+    </style>
+    <linearGradient id="topAccent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ABDC6;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#0ABDC6;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main dialog background -->
+  <rect id="center" x="12" y="12" width="40" height="40" fill="#0A0E14" fill-opacity="0.95"/>
+
+  <!-- Corners with rounded edges (8px radius) -->
+  <rect id="topleft" x="4" y="4" width="8" height="8" rx="8" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="topright" x="52" y="4" width="8" height="8" rx="8" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="bottomleft" x="4" y="52" width="8" height="8" rx="8" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="bottomright" x="52" y="52" width="8" height="8" rx="8" fill="#0A0E14" fill-opacity="0.95"/>
+
+  <!-- Edges -->
+  <rect id="top" x="12" y="4" width="40" height="8" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="bottom" x="12" y="52" width="40" height="8" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="left" x="4" y="12" width="8" height="40" fill="#0A0E14" fill-opacity="0.95"/>
+  <rect id="right" x="52" y="12" width="8" height="40" fill="#0A0E14" fill-opacity="0.95"/>
+
+  <!-- Cyan top accent line -->
+  <rect id="accent-top" x="4" y="4" width="56" height="2" fill="#0ABDC6" fill-opacity="0.7"/>
+
+  <!-- Subtle border on other sides -->
+  <rect id="border-bottom" x="4" y="58" width="56" height="1" fill="#08919A" fill-opacity="0.4"/>
+  <rect id="border-left" x="4" y="4" width="1" height="56" fill="#08919A" fill-opacity="0.5"/>
+  <rect id="border-right" x="59" y="4" width="1" height="56" fill="#08919A" fill-opacity="0.5"/>
+
+  <!-- Margin hints -->
+  <rect id="hint-top-margin" x="0" y="0" width="1" height="4" fill="none"/>
+  <rect id="hint-bottom-margin" x="0" y="60" width="1" height="4" fill="none"/>
+  <rect id="hint-left-margin" x="0" y="0" width="4" height="1" fill="none"/>
+  <rect id="hint-right-margin" x="60" y="0" width="4" height="1" fill="none"/>
+</svg>

@@ -1,0 +1,19 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "",
+                "Name": "bitpunk-theme contributors"
+            }
+        ],
+        "Category": "",
+        "Description": "Bitpunk Night City theme - OLED optimised with cyan accents",
+        "EnabledByDefault": true,
+        "Id": "Bitpunk",
+        "License": "GPL-3.0",
+        "Name": "Bitpunk",
+        "Version": "1.0",
+        "Website": "https://github.com/bitr8/bitpunk-theme"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Conky Bitpunk
+Comment=Bitpunk themed system monitor widget
+Exec=sh -c 'conky -c "$HOME/.config/conky/bitpunk.conf"'
+Terminal=false
+StartupNotify=false
+X-KDE-autostart-after=panel

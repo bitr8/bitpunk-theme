@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 126" width="144" height="126">
+  <defs>
+    <style type="text/css">
+      .ColorScheme-Text { color:#E0E8F0; }
+      .ColorScheme-Background { color:#0A0E14; }
+      .ColorScheme-ButtonFocus { color:#0ABDC6; }
+      .ColorScheme-ButtonHover { color:#2A3A4D; }
+      .ColorScheme-PositiveText { color:#0ABDC6; }
+      .ColorScheme-NeutralText { color:#F3E600; }
+    </style>
+  </defs>
+
+  <!-- ========== SOUTH PANEL (bottom, default) ========== -->
+
+  <!-- NORMAL state - subtle indicator line at bottom -->
+  <rect id="normal-center" x="8" y="4" width="20" height="20" fill="none"/>
+  <rect id="normal-top" x="8" y="0" width="20" height="4" fill="none"/>
+  <rect id="normal-bottom" x="8" y="24" width="20" height="2" fill="#08919A" fill-opacity="0.4"/>
+  <rect id="normal-left" x="4" y="4" width="4" height="20" fill="none"/>
+  <rect id="normal-right" x="28" y="4" width="4" height="20" fill="none"/>
+  <rect id="normal-topleft" x="4" y="0" width="4" height="4" fill="none"/>
+  <rect id="normal-topright" x="28" y="0" width="4" height="4" fill="none"/>
+  <rect id="normal-bottomleft" x="4" y="24" width="4" height="2" fill="#08919A" fill-opacity="0.4"/>
+  <rect id="normal-bottomright" x="28" y="24" width="4" height="2" fill="#08919A" fill-opacity="0.4"/>
+  <rect id="normal-hint-top-margin" x="0" y="0" width="1" height="0" fill="none"/>
+  <rect id="normal-hint-bottom-margin" x="0" y="26" width="1" height="4" fill="none"/>
+  <rect id="normal-hint-left-margin" x="0" y="0" width="4" height="1" fill="none"/>
+  <rect id="normal-hint-right-margin" x="32" y="0" width="4" height="1" fill="none"/>
+
+  <!-- HOVER state - subtle background glow -->
+  <rect id="hover-center" x="44" y="4" width="20" height="20" fill="#2A3A4D" fill-opacity="0.5"/>
+  <rect id="hover-top" x="44" y="0" width="20" height="4" fill="#2A3A4D" fill-opacity="0.3"/>
+  <rect id="hover-bottom" x="44" y="24" width="20" height="2" fill="#0ABDC6" fill-opacity="0.6"/>
+  <rect id="hover-left" x="40" y="4" width="4" height="20" fill="#2A3A4D" fill-opacity="0.3"/>
+  <rect id="hover-right" x="64" y="4" width="4" height="20" fill="#2A3A4D" fill-opacity="0.3"/>
+  <rect id="hover-topleft" x="40" y="0" width="4" height="4" rx="2" fill="#2A3A4D" fill-opacity="0.2"/>
+  <rect id="hover-topright" x="64" y="0" width="4" height="4" rx="2" fill="#2A3A4D" fill-opacity="0.2"/>
+  <rect id="hover-bottomleft" x="40" y="24" width="4" height="2" fill="#0ABDC6" fill-opacity="0.6"/>
+  <rect id="hover-bottomright" x="64" y="24" width="4" height="2" fill="#0ABDC6" fill-opacity="0.6"/>
+
+  <!-- FOCUS state - active window, bright cyan indicator -->
+  <rect id="focus-center" x="80" y="4" width="20" height="20" fill="#1C2632" fill-opacity="0.6"/>
+  <rect id="focus-top" x="80" y="0" width="20" height="4" fill="#1C2632" fill-opacity="0.4"/>
+  <rect id="focus-bottom" x="80" y="24" width="20" height="2" fill="#0ABDC6" fill-opacity="0.9"/>
+  <rect id="focus-left" x="76" y="4" width="4" height="20" fill="#1C2632" fill-opacity="0.4"/>
+  <rect id="focus-right" x="100" y="4" width="4" height="20" fill="#1C2632" fill-opacity="0.4"/>
+  <rect id="focus-topleft" x="76" y="0" width="4" height="4" rx="2" fill="#1C2632" fill-opacity="0.3"/>
+  <rect id="focus-topright" x="100" y="0" width="4" height="4" rx="2" fill="#1C2632" fill-opacity="0.3"/>
+  <rect id="focus-bottomleft" x="76" y="24" width="4" height="2" fill="#0ABDC6" fill-opacity="0.9"/>
+  <rect id="focus-bottomright" x="100" y="24" width="4" height="2" fill="#0ABDC6" fill-opacity="0.9"/>
+
+  <!-- MINIMIZED state - dimmed indicator -->
+  <rect id="minimized-center" x="8" y="36" width="20" height="20" fill="none"/>
+  <rect id="minimized-top" x="8" y="32" width="20" height="4" fill="none"/>
+  <rect id="minimized-bottom" x="8" y="56" width="20" height="2" fill="#4A5A6A" fill-opacity="0.3"/>
+  <rect id="minimized-left" x="4" y="36" width="4" height="20" fill="none"/>
+  <rect id="minimized-right" x="28" y="36" width="4" height="20" fill="none"/>
+  <rect id="minimized-topleft" x="4" y="32" width="4" height="4" fill="none"/>
+  <rect id="minimized-topright" x="28" y="32" width="4" height="4" fill="none"/>
+  <rect id="minimized-bottomleft" x="4" y="56" width="4" height="2" fill="#4A5A6A" fill-opacity="0.3"/>
+  <rect id="minimized-bottomright" x="28" y="56" width="4" height="2" fill="#4A5A6A" fill-opacity="0.3"/>
+
+  <!-- ATTENTION state - magenta pulse -->
+  <rect id="attention-center" x="44" y="36" width="20" height="20" fill="#EA00D9" fill-opacity="0.15"/>
+  <rect id="attention-top" x="44" y="32" width="20" height="4" fill="#EA00D9" fill-opacity="0.1"/>
+  <rect id="attention-bottom" x="44" y="56" width="20" height="2" fill="#EA00D9" fill-opacity="0.8"/>
+  <rect id="attention-left" x="40" y="36" width="4" height="20" fill="#EA00D9" fill-opacity="0.1"/>
+  <rect id="attention-right" x="64" y="36" width="4" height="20" fill="#EA00D9" fill-opacity="0.1"/>
+  <rect id="attention-topleft" x="40" y="32" width="4" height="4" fill="#EA00D9" fill-opacity="0.05"/>
+  <rect id="attention-topright" x="64" y="32" width="4" height="4" fill="#EA00D9" fill-opacity="0.05"/>
+  <rect id="attention-bottomleft" x="40" y="56" width="4" height="2" fill="#EA00D9" fill-opacity="0.8"/>
+  <rect id="attention-bottomright" x="64" y="56" width="4" height="2" fill="#EA00D9" fill-opacity="0.8"/>
+
+  <!-- PROGRESS indicator - cyan bar -->
+  <rect id="progress-center" x="80" y="36" width="20" height="20" fill="none"/>
+  <rect id="progress-top" x="80" y="32" width="20" height="4" fill="none"/>
+  <rect id="progress-bottom" x="80" y="56" width="20" height="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="progress-left" x="76" y="36" width="4" height="20" fill="none"/>
+  <rect id="progress-right" x="100" y="36" width="4" height="20" fill="none"/>
+  <rect id="progress-topleft" x="76" y="32" width="4" height="4" fill="none"/>
+  <rect id="progress-topright" x="100" y="32" width="4" height="4" fill="none"/>
+  <rect id="progress-bottomleft" x="76" y="56" width="4" height="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="progress-bottomright" x="100" y="56" width="4" height="2" fill="#0ABDC6" fill-opacity="0.5"/>
+
+  <!-- ========== NORTH PANEL (top) ========== -->
+
+  <!-- North normal - indicator at top -->
+  <rect id="north-normal-center" x="8" y="68" width="20" height="20" fill="none"/>
+  <rect id="north-normal-top" x="8" y="64" width="20" height="2" fill="#08919A" fill-opacity="0.4"/>
+  <rect id="north-normal-bottom" x="8" y="88" width="20" height="4" fill="none"/>
+  <rect id="north-normal-left" x="4" y="68" width="4" height="20" fill="none"/>
+  <rect id="north-normal-right" x="28" y="68" width="4" height="20" fill="none"/>
+  <rect id="north-normal-topleft" x="4" y="64" width="4" height="2" fill="#08919A" fill-opacity="0.4"/>
+  <rect id="north-normal-topright" x="28" y="64" width="4" height="2" fill="#08919A" fill-opacity="0.4"/>
+  <rect id="north-normal-bottomleft" x="4" y="88" width="4" height="4" fill="none"/>
+  <rect id="north-normal-bottomright" x="28" y="88" width="4" height="4" fill="none"/>
+
+  <!-- North hover -->
+  <rect id="north-hover-center" x="44" y="68" width="20" height="20" fill="#2A3A4D" fill-opacity="0.5"/>
+  <rect id="north-hover-top" x="44" y="64" width="20" height="2" fill="#0ABDC6" fill-opacity="0.6"/>
+  <rect id="north-hover-bottom" x="44" y="88" width="20" height="4" fill="#2A3A4D" fill-opacity="0.3"/>
+  <rect id="north-hover-left" x="40" y="68" width="4" height="20" fill="#2A3A4D" fill-opacity="0.3"/>
+  <rect id="north-hover-right" x="64" y="68" width="4" height="20" fill="#2A3A4D" fill-opacity="0.3"/>
+  <rect id="north-hover-topleft" x="40" y="64" width="4" height="2" fill="#0ABDC6" fill-opacity="0.6"/>
+  <rect id="north-hover-topright" x="64" y="64" width="4" height="2" fill="#0ABDC6" fill-opacity="0.6"/>
+  <rect id="north-hover-bottomleft" x="40" y="88" width="4" height="4" rx="2" fill="#2A3A4D" fill-opacity="0.2"/>
+  <rect id="north-hover-bottomright" x="64" y="88" width="4" height="4" rx="2" fill="#2A3A4D" fill-opacity="0.2"/>
+
+  <!-- North focus -->
+  <rect id="north-focus-center" x="80" y="68" width="20" height="20" fill="#1C2632" fill-opacity="0.6"/>
+  <rect id="north-focus-top" x="80" y="64" width="20" height="2" fill="#0ABDC6" fill-opacity="0.9"/>
+  <rect id="north-focus-bottom" x="80" y="88" width="20" height="4" fill="#1C2632" fill-opacity="0.4"/>
+  <rect id="north-focus-left" x="76" y="68" width="4" height="20" fill="#1C2632" fill-opacity="0.4"/>
+  <rect id="north-focus-right" x="100" y="68" width="4" height="20" fill="#1C2632" fill-opacity="0.4"/>
+  <rect id="north-focus-topleft" x="76" y="64" width="4" height="2" fill="#0ABDC6" fill-opacity="0.9"/>
+  <rect id="north-focus-topright" x="100" y="64" width="4" height="2" fill="#0ABDC6" fill-opacity="0.9"/>
+  <rect id="north-focus-bottomleft" x="76" y="88" width="4" height="4" rx="2" fill="#1C2632" fill-opacity="0.3"/>
+  <rect id="north-focus-bottomright" x="100" y="88" width="4" height="4" rx="2" fill="#1C2632" fill-opacity="0.3"/>
+
+  <!-- North minimized -->
+  <rect id="north-minimized-center" x="8" y="100" width="20" height="20" fill="none"/>
+  <rect id="north-minimized-top" x="8" y="96" width="20" height="2" fill="#4A5A6A" fill-opacity="0.3"/>
+  <rect id="north-minimized-bottom" x="8" y="120" width="20" height="4" fill="none"/>
+  <rect id="north-minimized-left" x="4" y="100" width="4" height="20" fill="none"/>
+  <rect id="north-minimized-right" x="28" y="100" width="4" height="20" fill="none"/>
+  <rect id="north-minimized-topleft" x="4" y="96" width="4" height="2" fill="#4A5A6A" fill-opacity="0.3"/>
+  <rect id="north-minimized-topright" x="28" y="96" width="4" height="2" fill="#4A5A6A" fill-opacity="0.3"/>
+  <rect id="north-minimized-bottomleft" x="4" y="120" width="4" height="4" fill="none"/>
+  <rect id="north-minimized-bottomright" x="28" y="120" width="4" height="4" fill="none"/>
+
+  <!-- North attention -->
+  <rect id="north-attention-center" x="44" y="100" width="20" height="20" fill="#EA00D9" fill-opacity="0.15"/>
+  <rect id="north-attention-top" x="44" y="96" width="20" height="2" fill="#EA00D9" fill-opacity="0.8"/>
+  <rect id="north-attention-bottom" x="44" y="120" width="20" height="4" fill="#EA00D9" fill-opacity="0.1"/>
+  <rect id="north-attention-left" x="40" y="100" width="4" height="20" fill="#EA00D9" fill-opacity="0.1"/>
+  <rect id="north-attention-right" x="64" y="100" width="4" height="20" fill="#EA00D9" fill-opacity="0.1"/>
+  <rect id="north-attention-topleft" x="40" y="96" width="4" height="2" fill="#EA00D9" fill-opacity="0.8"/>
+  <rect id="north-attention-topright" x="64" y="96" width="4" height="2" fill="#EA00D9" fill-opacity="0.8"/>
+  <rect id="north-attention-bottomleft" x="40" y="120" width="4" height="4" fill="#EA00D9" fill-opacity="0.05"/>
+  <rect id="north-attention-bottomright" x="64" y="120" width="4" height="4" fill="#EA00D9" fill-opacity="0.05"/>
+
+  <!-- North progress -->
+  <rect id="north-progress-center" x="80" y="100" width="20" height="20" fill="none"/>
+  <rect id="north-progress-top" x="80" y="96" width="20" height="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="north-progress-bottom" x="80" y="120" width="20" height="4" fill="none"/>
+  <rect id="north-progress-left" x="76" y="100" width="4" height="20" fill="none"/>
+  <rect id="north-progress-right" x="100" y="100" width="4" height="20" fill="none"/>
+  <rect id="north-progress-topleft" x="76" y="96" width="4" height="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="north-progress-topright" x="100" y="96" width="4" height="2" fill="#0ABDC6" fill-opacity="0.5"/>
+  <rect id="north-progress-bottomleft" x="76" y="120" width="4" height="4" fill="none"/>
+  <rect id="north-progress-bottomright" x="100" y="120" width="4" height="4" fill="none"/>
+
+  <!-- Group expander arrows -->
+  <path id="group-expander-top" d="M116,4 L120,0 L124,4" stroke="#0ABDC6" stroke-width="1" fill="none"/>
+  <path id="group-expander-bottom" d="M116,8 L120,12 L124,8" stroke="#0ABDC6" stroke-width="1" fill="none"/>
+  <path id="group-expander-left" d="M132,0 L128,4 L132,8" stroke="#0ABDC6" stroke-width="1" fill="none"/>
+  <path id="group-expander-right" d="M136,0 L140,4 L136,8" stroke="#0ABDC6" stroke-width="1" fill="none"/>
+</svg>
