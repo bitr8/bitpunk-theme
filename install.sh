@@ -92,9 +92,10 @@ check_dependencies() {
         missing+=("conky")
     fi
 
-    # Check for papirus icons
+    # Check for papirus icons (required for cyan folder colour feature)
     if [ ! -d "/usr/share/icons/Papirus-Dark" ] && [ ! -d "$HOME/.local/share/icons/Papirus-Dark" ]; then
         missing+=("papirus-icon-theme")
+        print_warning "Papirus-Dark icons not found - cyan folder colours will not be applied"
     fi
 
     if [ ${#missing[@]} -gt 0 ]; then
@@ -309,8 +310,26 @@ install_papirus_folders() {
     print_step "Applying cyan folder colour..."
     if papirus-folders -C cyan --theme Papirus-Dark 2>/dev/null; then
         print_success "Cyan folder colour applied"
+
+        # Clear icon cache to ensure changes are visible immediately
+        print_step "Clearing icon cache..."
+        rm -rf ~/.cache/icon-cache.kcache 2>/dev/null || true
+        kbuildsycoca6 --noincremental 2>/dev/null || true
+
+        verify_icon_theme
     else
         print_warning "Failed to apply folder colour"
+    fi
+}
+
+# Verify icon theme was applied correctly
+verify_icon_theme() {
+    if papirus-folders -l --theme Papirus-Dark 2>/dev/null | grep -q "cyan"; then
+        print_success "Icon theme verified: cyan folders active"
+        return 0
+    else
+        print_warning "Icon theme may not be applied correctly"
+        return 1
     fi
 }
 

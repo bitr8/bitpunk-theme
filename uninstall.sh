@@ -42,6 +42,17 @@ else
     QDBUS_CMD="qdbus"
 fi
 
+# Restore Papirus folder colours to default
+restore_papirus_folders() {
+    print_step "Restoring Papirus folder colours..."
+    if command -v papirus-folders &> /dev/null; then
+        papirus-folders --restore --theme Papirus-Dark 2>/dev/null || true
+        print_success "Papirus folder colours restored to default"
+    else
+        print_warning "papirus-folders not found, skipping folder colour restore"
+    fi
+}
+
 print_header "Cyberpunk 2077 Theme Uninstaller"
 
 echo "This will remove the following:"
@@ -51,6 +62,7 @@ echo "  - Konsole theme and profile"
 echo "  - GTK theme: Cyberpunk2077"
 echo "  - Conky config and autostart"
 echo "  - Wallpaper"
+echo "  - Papirus folder colour (restored to default blue)"
 echo ""
 echo -e "${YELLOW}Note: Cursor theme (Bibata-Modern-Ice) will NOT be removed.${NC}"
 echo -e "${YELLOW}Note: SDDM theme requires manual removal with sudo.${NC}"
@@ -61,6 +73,9 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     echo "Cancelled."
     exit 0
 fi
+
+# Restore Papirus folder colours first
+restore_papirus_folders
 
 print_header "Removing Theme Files"
 
