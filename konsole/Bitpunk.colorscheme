@@ -26,13 +26,13 @@ Color=200,58,68
 Color=255,107,115
 
 [Color2]
-Color=10,189,198
+Color=46,216,140
 
 [Color2Faint]
-Color=8,145,154
+Color=36,170,110
 
 [Color2Intense]
-Color=46,216,224
+Color=80,240,170
 
 [Color3]
 Color=243,230,0

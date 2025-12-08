@@ -112,10 +112,16 @@ print_font_instructions() {
     case "$PKG_MANAGER" in
         pacman) echo "  sudo pacman -S ttf-jetbrains-mono ttf-cascadia-code-nerd inter-font" ;;
         dnf)    echo "  sudo dnf install jetbrains-mono-fonts cascadia-code-nf-fonts google-inter-fonts" ;;
-        apt)    echo "  sudo apt install fonts-jetbrains-mono fonts-cascadia-code fonts-inter" ;;
-        *)      echo "  Install JetBrains Mono, Cascadia Code NF, and Inter fonts" ;;
+        apt)    echo "  # Nerd Fonts not in apt - download from https://www.nerdfonts.com/font-downloads"
+                echo "  sudo apt install fonts-jetbrains-mono fonts-inter"
+                echo "  # Then manually install CascadiaCode Nerd Font" ;;
+        zypper) echo "  sudo zypper install jetbrains-mono-fonts inter-fonts"
+                echo "  # Nerd Fonts: download from https://www.nerdfonts.com/font-downloads" ;;
+        *)      echo "  Install JetBrains Mono, Cascadia Code NF (Nerd Font), and Inter fonts"
+                echo "  Nerd Fonts: https://www.nerdfonts.com/font-downloads" ;;
     esac
     echo ""
+    print_warning "Nerd Fonts are REQUIRED for conky icons to display correctly"
 }
 
 # Detect distro
@@ -205,8 +211,9 @@ check_dependencies() {
         if ! fc-list | grep -qi "jetbrains"; then
             missing_fonts+=("JetBrains Mono")
         fi
-        if ! fc-list | grep -qi "cascadia"; then
-            missing_fonts+=("Cascadia Code NF")
+        # Check for Nerd Font variant (required for conky icons)
+        if ! fc-list | grep -qi "cascadia.*nerd\|cascadia.*nf"; then
+            missing_fonts+=("Cascadia Code NF (Nerd Font)")
         fi
         if ! fc-list | grep -qi "inter"; then
             missing_fonts+=("Inter")
@@ -527,14 +534,16 @@ install_cursor() {
         ACTUAL_SHA256=$(sha256sum "$TEMP_DIR/cursor.tar.xz" | cut -d' ' -f1)
         if [ "$ACTUAL_SHA256" = "$CURSOR_SHA256" ]; then
             print_success "Checksum verified"
+            # Extract and install
+            tar -xf "$TEMP_DIR/cursor.tar.xz" -C "$TEMP_DIR"
+            mv "$TEMP_DIR/Bibata-Modern-Ice" ~/.local/share/icons/
+            print_success "Cursor theme installed"
         else
-            print_warning "Checksum verification failed - installing anyway (may be corrupted)"
+            print_error "Checksum verification failed - aborting cursor install"
+            print_warning "Expected: $CURSOR_SHA256"
+            print_warning "Got:      $ACTUAL_SHA256"
+            print_warning "Install manually from: https://github.com/ful1e5/Bibata_Cursor/releases"
         fi
-
-        # Extract and install
-        tar -xf "$TEMP_DIR/cursor.tar.xz" -C "$TEMP_DIR"
-        mv "$TEMP_DIR/Bibata-Modern-Ice" ~/.local/share/icons/
-        print_success "Cursor theme installed"
     else
         print_warning "Failed to download cursor theme. Install manually from:"
         echo "  https://github.com/ful1e5/Bibata_Cursor/releases"

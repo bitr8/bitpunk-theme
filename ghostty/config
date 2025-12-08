@@ -19,7 +19,7 @@ selection-foreground = 050505
 # ANSI Colors (0-7: normal, 8-15: bright)
 palette = 0=#0a0e14
 palette = 1=#ff4a57
-palette = 2=#0abdc6
+palette = 2=#2ed88c
 palette = 3=#f3e600
 palette = 4=#089196
 palette = 5=#ea00d9
@@ -27,7 +27,7 @@ palette = 6=#0abdc6
 palette = 7=#8a9bad
 palette = 8=#2a3a4d
 palette = 9=#ff6b73
-palette = 10=#2ed8e0
+palette = 10=#50f0aa
 palette = 11=#ffef4a
 palette = 12=#0abdc6
 palette = 13=#ff33e6

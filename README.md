@@ -61,7 +61,7 @@ sudo apt install plasma-desktop conky papirus-icon-theme curl wget
 ### Quick Install
 
 ```bash
-git clone git@github.com:bitr8/bitpunk-theme.git
+git clone https://github.com/bitr8/bitpunk-theme.git
 cd bitpunk-theme
 ./install.sh
 ```
