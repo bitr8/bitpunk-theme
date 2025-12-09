@@ -1,2 +1,8 @@
+# AI assistant config (local only)
+.claude/
 CLAUDE.md
+.specify/
+specs/
+
+# Documentation (generated)
 docs/
