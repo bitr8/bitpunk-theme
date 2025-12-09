@@ -185,8 +185,8 @@ check_dependencies() {
     local missing_cmds=()
     local missing_fonts=()
 
-    # Required commands (including tools used for hardware detection)
-    for cmd in plasmashell conky kwriteconfig6 plasma-apply-colorscheme curl lscpu lspci tar sha256sum; do
+    # Required commands (including tools used for hardware detection and theme application)
+    for cmd in plasmashell conky kwriteconfig6 plasma-apply-colorscheme plasma-apply-desktoptheme plasma-apply-wallpaperimage curl lscpu lspci tar sha256sum kbuildsycoca6; do
         if ! command -v "$cmd" &> /dev/null; then
             missing_cmds+=("$cmd")
         fi
@@ -652,7 +652,7 @@ apply_theme() {
     local apply_errors=0
 
     print_step "Applying colour scheme..."
-    if ! plasma-apply-colorscheme Bitpunk 2>&1 | grep -qiE 'error|failed|not found'; then
+    if plasma-apply-colorscheme Bitpunk >/dev/null 2>&1; then
         print_success "Colour scheme applied"
     else
         print_warning "Could not apply colour scheme - check plasma-apply-colorscheme is installed"
@@ -660,7 +660,7 @@ apply_theme() {
     fi
 
     print_step "Applying desktop theme..."
-    if ! plasma-apply-desktoptheme Bitpunk 2>&1 | grep -qiE 'error|failed|not found'; then
+    if plasma-apply-desktoptheme Bitpunk >/dev/null 2>&1; then
         print_success "Desktop theme applied"
     else
         print_warning "Could not apply desktop theme - check plasma-apply-desktoptheme is installed"
@@ -677,7 +677,7 @@ apply_theme() {
     fi
 
     print_step "Applying wallpaper..."
-    if plasma-apply-wallpaperimage ~/.config/conky/wallpaper-bitpunk.jpg 2>/dev/null; then
+    if plasma-apply-wallpaperimage "$HOME/.config/conky/wallpaper-bitpunk.jpg" >/dev/null 2>&1; then
         print_success "Wallpaper applied"
     else
         print_warning "Could not apply wallpaper - you may need to set it manually in System Settings"
@@ -732,12 +732,9 @@ EOF
     print_step "Starting conky..."
     killall conky 2>/dev/null || true
     sleep 1
-    if conky -c ~/.config/conky/bitpunk.conf &>/dev/null & then
-        disown
-        print_success "Conky started"
-    else
-        print_warning "Could not start conky - run manually: conky -c ~/.config/conky/bitpunk.conf"
-    fi
+    conky -c ~/.config/conky/bitpunk.conf &>/dev/null &
+    disown
+    print_success "Conky started"
 
     if [ "$apply_errors" -gt 0 ]; then
         print_warning "Theme applied with $apply_errors warning(s) - some components may need manual configuration"

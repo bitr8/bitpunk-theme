@@ -19,19 +19,20 @@ Rectangle {
         }
     }
 
-    // Subtle scan lines overlay
-    Item {
+    // Subtle scan lines overlay (using Canvas for performance)
+    Canvas {
         id: scanLines
         anchors.fill: parent
         opacity: 0.02
-
-        Repeater {
-            model: Math.ceil(parent.height / 2)
-            Rectangle {
-                width: parent.width
-                height: 1
-                y: index * 2
-                color: "#0ABDC6"
+        onPaint: {
+            var ctx = getContext("2d");
+            ctx.strokeStyle = "#0ABDC6";
+            ctx.lineWidth = 1;
+            for (var y = 0; y < height; y += 2) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(width, y);
+                ctx.stroke();
             }
         }
     }

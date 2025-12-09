@@ -2,7 +2,7 @@
 # Configure Kurve Audio Visualizer with Bitpunk theme colours
 # This script verifies Kurve settings match the documented configuration
 
-set -e
+set -euo pipefail
 
 # Colours for output
 CYAN='\033[0;36m'
@@ -14,6 +14,33 @@ RESET='\033[0m'
 
 # Configuration file
 CONFIG_FILE="$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc"
+
+# Find Kurve applet IDs dynamically
+find_kurve_ids() {
+    local config_file="$1"
+    local containment_id=""
+    local applet_id=""
+
+    # Find the section containing the Kurve widget
+    local section
+    section=$(grep -n 'luisbocanegra.audio.visualizer' "$config_file" 2>/dev/null | head -1 | cut -d: -f1)
+
+    if [ -n "$section" ]; then
+        # Extract containment and applet IDs from the section header above the match
+        local header
+        header=$(head -n "$section" "$config_file" | grep -E '^\[Containments\]\[[0-9]+\]\[Applets\]\[[0-9]+\]' | tail -1)
+        if [ -n "$header" ]; then
+            containment_id=$(echo "$header" | sed -E 's/.*\[Containments\]\[([0-9]+)\].*/\1/')
+            applet_id=$(echo "$header" | sed -E 's/.*\[Applets\]\[([0-9]+)\].*/\1/')
+        fi
+    fi
+
+    echo "$containment_id $applet_id"
+}
+
+KURVE_IDS=""
+CONTAINMENT_ID=""
+APPLET_ID=""
 
 echo -e "${CYAN}Kurve Audio Visualizer Configuration${RESET}"
 echo "======================================="
@@ -47,11 +74,25 @@ echo ""
 # Extract Kurve settings from plasma config
 if grep -q "luisbocanegra.audio.visualizer" "$CONFIG_FILE"; then
     echo -e "${GREEN}✓ Kurve widget found in Plasma config${RESET}"
+
+    # Find the dynamic IDs
+    KURVE_IDS=$(find_kurve_ids "$CONFIG_FILE")
+    # shellcheck disable=SC2086
+    set -- $KURVE_IDS
+    CONTAINMENT_ID="$1"
+    APPLET_ID="$2"
+
+    if [ -z "$CONTAINMENT_ID" ] || [ -z "$APPLET_ID" ]; then
+        echo -e "${YELLOW}⚠ Could not determine Kurve widget IDs dynamically${RESET}"
+        echo "  Using manual configuration instructions below"
+    else
+        echo -e "  Containment ID: ${CYAN}$CONTAINMENT_ID${RESET}, Applet ID: ${CYAN}$APPLET_ID${RESET}"
+    fi
     echo ""
 
     # Extract and display settings
     echo -e "${YELLOW}Visualizer Settings:${RESET}"
-    grep -A 20 "\[Containments\]\[30\]\[Applets\]\[33\]\[Configuration\]\[General\]" "$CONFIG_FILE" | grep -E "^(barCount|barGap|barWidth|roundedBars|framerate|monstercat)" | while read line; do
+    grep -A 20 "\[Containments\]\[${CONTAINMENT_ID:-[0-9]*}\]\[Applets\]\[${APPLET_ID:-[0-9]*}\]\[Configuration\]\[General\]" "$CONFIG_FILE" | grep -E "^(barCount|barGap|barWidth|roundedBars|framerate|monstercat)" | while IFS= read -r line; do
         key=$(echo "$line" | cut -d= -f1)
         value=$(echo "$line" | cut -d= -f2)
 
@@ -81,7 +122,7 @@ if grep -q "luisbocanegra.audio.visualizer" "$CONFIG_FILE"; then
 
     echo ""
     echo -e "${YELLOW}General Settings:${RESET}"
-    grep -A 20 "\[Containments\]\[30\]\[Applets\]\[33\]\[Configuration\]\[General\]" "$CONFIG_FILE" | grep -E "^(hideWhenIdle|idleTimer|disableLeftClick|desktopWidgetBg)" | while read line; do
+    grep -A 20 "\[Containments\]\[${CONTAINMENT_ID:-[0-9]*}\]\[Applets\]\[${APPLET_ID:-[0-9]*}\]\[Configuration\]\[General\]" "$CONFIG_FILE" | grep -E "^(hideWhenIdle|idleTimer|disableLeftClick|desktopWidgetBg)" | while IFS= read -r line; do
         key=$(echo "$line" | cut -d= -f1)
         value=$(echo "$line" | cut -d= -f2)
 
@@ -95,7 +136,7 @@ if grep -q "luisbocanegra.audio.visualizer" "$CONFIG_FILE"; then
 
     echo ""
     echo -e "${YELLOW}Position:${RESET}"
-    grep "ItemGeometries" "$CONFIG_FILE" | grep -o "Applet-33:[0-9]*,[0-9]*,[0-9]*,[0-9]*" | while read geom; do
+    grep "ItemGeometries" "$CONFIG_FILE" | grep -o "Applet-${APPLET_ID:-[0-9]*}:[0-9]*,[0-9]*,[0-9]*,[0-9]*" | while IFS= read -r geom; do
         coords=$(echo "$geom" | cut -d: -f2)
         x=$(echo "$coords" | cut -d, -f1)
         y=$(echo "$coords" | cut -d, -f2)

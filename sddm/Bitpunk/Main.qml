@@ -37,7 +37,7 @@ Rectangle {
         anchors.fill: parent
         source: config.background || ""
         fillMode: Image.PreserveAspectCrop
-        visible: config.background || false
+        visible: config.background !== undefined && config.background !== ""
     }
 
     // Subtle grid pattern overlay

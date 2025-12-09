@@ -4,7 +4,7 @@
 # Removes all theme components installed by install.sh
 #
 
-set -e
+set -euo pipefail
 
 THEME_NAME="Bitpunk"
 

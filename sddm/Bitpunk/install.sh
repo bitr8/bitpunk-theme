@@ -3,7 +3,8 @@
 # NOTE: SDDM themes must be installed system-wide to /usr/share/sddm/themes/
 # This script outputs the commands to run - execute them manually with sudo
 
-SOURCE_DIR="$HOME/.local/share/sddm/themes/Bitpunk"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SOURCE_DIR="$SCRIPT_DIR"
 DEST_DIR="/usr/share/sddm/themes/Bitpunk"
 
 echo "============================================"
