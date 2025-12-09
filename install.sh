@@ -5,7 +5,7 @@
 # SDDM theme requires separate sudo installation (instructions printed at end)
 #
 
-set -e
+set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 THEME_NAME="Bitpunk"
@@ -252,11 +252,12 @@ detect_sensors() {
 
     # Find CPU temp sensor (k10temp, coretemp, etc.)
     CPU_HWMON=""
+    HAS_CPU_SENSOR=true
     for hwmon in /sys/class/hwmon/hwmon*; do
         if [ -f "$hwmon/name" ]; then
             name=$(cat "$hwmon/name")
             case "$name" in
-                k10temp|coretemp|zenpower)
+                k10temp|coretemp|zenpower|acpitz|thinkpad|hp-wmi|dell-smm-hwmon)
                     CPU_HWMON=$(basename "$hwmon" | sed 's/hwmon//')
                     print_success "CPU sensor: $name (hwmon$CPU_HWMON)"
                     break
@@ -266,8 +267,16 @@ detect_sensors() {
     done
 
     if [ -z "$CPU_HWMON" ]; then
-        print_warning "CPU sensor not found, using hwmon0"
-        CPU_HWMON="0"
+        # Check if running in a VM
+        if command -v systemd-detect-virt &> /dev/null && systemd-detect-virt -q 2>/dev/null; then
+            print_warning "Virtual machine detected - CPU temperature monitoring will be disabled"
+            HAS_CPU_SENSOR=false
+            CPU_HWMON="0"
+        else
+            print_warning "CPU sensor not found - CPU temperature section will be hidden"
+            HAS_CPU_SENSOR=false
+            CPU_HWMON="0"
+        fi
     fi
 
     # Find GPU temp sensor (AMD, NVIDIA, Intel, etc.)
@@ -481,10 +490,22 @@ install_theme() {
         -e "s/__BATTERY__/$BATTERY/g" \
         "$SCRIPT_DIR/conky/bitpunk.conf" > ~/.config/conky/bitpunk.conf
 
+    # Handle CPU section
+    if [ "$HAS_CPU_SENSOR" = false ]; then
+        # Remove the entire CPU temp section on VMs or unsupported hardware
+        sed -i '/__CPU_SECTION_START__/,/__CPU_SECTION_END__/d' ~/.config/conky/bitpunk.conf 2>/dev/null || true
+        print_step "CPU temperature section removed (no sensor found)"
+    else
+        # Remove marker lines (keep the CPU content)
+        sed -i '/__CPU_SECTION_START__/d' ~/.config/conky/bitpunk.conf 2>/dev/null || true
+        sed -i '/__CPU_SECTION_END__/d' ~/.config/conky/bitpunk.conf 2>/dev/null || true
+    fi
+
     # Handle GPU section
     if [ "$HAS_GPU_SENSOR" = false ]; then
         # Remove the entire GPU section on VMs or unsupported hardware
         sed -i '/__GPU_SECTION_START__/,/__GPU_SECTION_END__/d' ~/.config/conky/bitpunk.conf 2>/dev/null || true
+        print_step "GPU section removed (no sensor found)"
     else
         # Remove marker lines (keep the GPU content)
         sed -i '/__GPU_SECTION_START__/d' ~/.config/conky/bitpunk.conf 2>/dev/null || true
@@ -495,13 +516,18 @@ install_theme() {
     if [ "$HAS_BATTERY" = false ]; then
         # Remove the entire battery section on desktops
         sed -i '/__BATTERY_SECTION_START__/,/__BATTERY_SECTION_END__/d' ~/.config/conky/bitpunk.conf 2>/dev/null || true
+        print_step "Battery section removed (desktop system)"
     else
         # On laptops, just remove the marker lines (keep the battery content)
         sed -i '/__BATTERY_SECTION_START__/d' ~/.config/conky/bitpunk.conf 2>/dev/null || true
         sed -i '/__BATTERY_SECTION_END__/d' ~/.config/conky/bitpunk.conf 2>/dev/null || true
     fi
 
-    print_success "Conky config installed (CPU: hwmon$CPU_HWMON, GPU: hwmon$GPU_HWMON, NET: $NET_IFACE)"
+    # Build summary of what was installed
+    local sensors_summary="NET: $NET_IFACE"
+    [ "$HAS_CPU_SENSOR" = true ] && sensors_summary="CPU: hwmon$CPU_HWMON, $sensors_summary"
+    [ "$HAS_GPU_SENSOR" = true ] && sensors_summary="GPU: hwmon$GPU_HWMON, $sensors_summary"
+    print_success "Conky config installed ($sensors_summary)"
 
     # Conky autostart
     print_step "Installing conky autostart..."
@@ -623,28 +649,64 @@ verify_icon_theme() {
 apply_theme() {
     print_header "Applying Theme"
 
+    local apply_errors=0
+
     print_step "Applying colour scheme..."
-    plasma-apply-colorscheme Bitpunk 2>/dev/null || print_warning "Could not apply colour scheme"
+    if ! plasma-apply-colorscheme Bitpunk 2>&1 | grep -qiE 'error|failed|not found'; then
+        print_success "Colour scheme applied"
+    else
+        print_warning "Could not apply colour scheme - check plasma-apply-colorscheme is installed"
+        ((apply_errors++)) || true
+    fi
 
     print_step "Applying desktop theme..."
-    plasma-apply-desktoptheme Bitpunk 2>/dev/null || print_warning "Could not apply desktop theme"
+    if ! plasma-apply-desktoptheme Bitpunk 2>&1 | grep -qiE 'error|failed|not found'; then
+        print_success "Desktop theme applied"
+    else
+        print_warning "Could not apply desktop theme - check plasma-apply-desktoptheme is installed"
+        ((apply_errors++)) || true
+    fi
 
     print_step "Applying splash screen..."
-    kwriteconfig6 --file ksplashrc --group KSplash --key Theme com.github.bitpunk.splash 2>/dev/null || print_warning "Could not apply splash screen"
-    kwriteconfig6 --file ksplashrc --group KSplash --key Engine KSplashQML 2>/dev/null || true
+    if kwriteconfig6 --file ksplashrc --group KSplash --key Theme com.github.bitpunk.splash 2>/dev/null; then
+        kwriteconfig6 --file ksplashrc --group KSplash --key Engine KSplashQML 2>/dev/null || true
+        print_success "Splash screen configured"
+    else
+        print_warning "Could not apply splash screen - check kwriteconfig6 is installed"
+        ((apply_errors++)) || true
+    fi
 
     print_step "Applying wallpaper..."
-    plasma-apply-wallpaperimage ~/.config/conky/wallpaper-bitpunk.jpg 2>/dev/null || print_warning "Could not apply wallpaper"
+    if plasma-apply-wallpaperimage ~/.config/conky/wallpaper-bitpunk.jpg 2>/dev/null; then
+        print_success "Wallpaper applied"
+    else
+        print_warning "Could not apply wallpaper - you may need to set it manually in System Settings"
+        ((apply_errors++)) || true
+    fi
 
     print_step "Setting icon theme..."
-    kwriteconfig6 --file kdeglobals --group Icons --key Theme Papirus-Dark 2>/dev/null || true
+    if kwriteconfig6 --file kdeglobals --group Icons --key Theme Papirus-Dark 2>/dev/null; then
+        print_success "Icon theme set to Papirus-Dark"
+    else
+        print_warning "Could not set icon theme"
+        ((apply_errors++)) || true
+    fi
 
     print_step "Setting cursor theme..."
-    kwriteconfig6 --file kcminputrc --group Mouse --key cursorTheme Bibata-Modern-Ice 2>/dev/null || true
-    kwriteconfig6 --file kcminputrc --group Mouse --key cursorSize 24 2>/dev/null || true
+    if kwriteconfig6 --file kcminputrc --group Mouse --key cursorTheme Bibata-Modern-Ice 2>/dev/null && \
+       kwriteconfig6 --file kcminputrc --group Mouse --key cursorSize 24 2>/dev/null; then
+        print_success "Cursor theme set to Bibata-Modern-Ice"
+    else
+        print_warning "Could not set cursor theme"
+        ((apply_errors++)) || true
+    fi
 
     print_step "Setting Konsole default profile..."
-    kwriteconfig6 --file konsolerc --group "Desktop Entry" --key DefaultProfile Bitpunk.profile 2>/dev/null || true
+    if kwriteconfig6 --file konsolerc --group "Desktop Entry" --key DefaultProfile Bitpunk.profile 2>/dev/null; then
+        print_success "Konsole profile set"
+    else
+        print_warning "Could not set Konsole profile"
+    fi
 
     print_step "Configuring GTK..."
     mkdir -p ~/.config/gtk-3.0 ~/.config/gtk-4.0
@@ -658,17 +720,30 @@ gtk-cursor-theme-name=Bibata-Modern-Ice
 gtk-cursor-theme-size=24
 EOF
     cp ~/.config/gtk-3.0/settings.ini ~/.config/gtk-4.0/settings.ini
+    print_success "GTK settings configured"
 
     print_step "Refreshing KWin..."
-    $QDBUS_CMD org.kde.KWin /KWin reconfigure 2>/dev/null || print_warning "Could not refresh KWin"
+    if $QDBUS_CMD org.kde.KWin /KWin reconfigure 2>/dev/null; then
+        print_success "KWin refreshed"
+    else
+        print_warning "Could not refresh KWin - changes may require logout to take effect"
+    fi
 
     print_step "Starting conky..."
     killall conky 2>/dev/null || true
     sleep 1
-    conky -c ~/.config/conky/bitpunk.conf &>/dev/null &
-    disown
+    if conky -c ~/.config/conky/bitpunk.conf &>/dev/null & then
+        disown
+        print_success "Conky started"
+    else
+        print_warning "Could not start conky - run manually: conky -c ~/.config/conky/bitpunk.conf"
+    fi
 
-    print_success "Theme applied!"
+    if [ "$apply_errors" -gt 0 ]; then
+        print_warning "Theme applied with $apply_errors warning(s) - some components may need manual configuration"
+    else
+        print_success "Theme applied successfully!"
+    fi
 }
 
 # Print SDDM instructions
