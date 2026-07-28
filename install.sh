@@ -470,7 +470,7 @@ install_theme() {
 
     # Wallpaper
     print_step "Installing wallpaper..."
-    cp "$SCRIPT_DIR/wallpapers/wallpaper-bitpunk.jpg" ~/.config/conky/
+    cp "$SCRIPT_DIR/wallpapers/bitpunk-cipher.jpg" ~/.config/conky/
     print_success "Wallpaper installed"
 
     # Conky (with sensor substitution)
