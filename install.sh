@@ -471,7 +471,8 @@ install_theme() {
     # Wallpaper
     print_step "Installing wallpaper..."
     cp "$SCRIPT_DIR/wallpapers/bitpunk-cipher.jpg" ~/.config/conky/
-    print_success "Wallpaper installed"
+    plasma-apply-wallpaperimage "$SCRIPT_DIR/wallpapers/bitpunk-cipher.jpg"
+    print_success "Wallpaper applied , restart shell for changes to take place"
 
     # Conky (with sensor substitution)
     print_step "Installing conky config (with detected sensors)..."
